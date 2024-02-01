@@ -1,0 +1,164 @@
+import 'package:flutter/material.dart';
+import 'package:lame/appBar.dart';
+import 'package:lame/bttombar.dart';
+
+class Account extends StatefulWidget {
+  const Account({super.key});
+
+  @override
+  State<Account> createState() => _AccountState();
+}
+
+class _AccountState extends State<Account> {
+  Appbarr customAppBar = Appbarr();
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF01BDB2),
+      appBar: AppBar(
+        title: const Text(
+          'Personal Informations',
+          style: TextStyle(fontWeight: FontWeight.w900),
+        ),
+        elevation: 10,
+        backgroundColor: const Color(0xFF01BDB2),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_sharp),
+        ),
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: (String result) {
+              print("Selected: $result");
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              const PopupMenuItem<String>(
+                value: 'item1',
+                child: Text('item1'),
+              ),
+              const PopupMenuItem<String>(
+                value: 'item1',
+                child: Text('item1'),
+              ),
+              const PopupMenuItem<String>(
+                value: 'item1',
+                child: Text('item1'),
+              ),
+              const PopupMenuItem<String>(
+                value: 'item1',
+                child: Text('item1'),
+              ),
+            ],
+          ),
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              height: 400,
+              decoration: const BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: CircleAvatar(
+                        child: Icon(
+                          Icons.person,
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          size: 100,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 45,
+                      ),
+                    ),
+                    Text('Hello...! Your Name')
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  buildEditableRow('Father\'s Name', Icons.edit),
+                  buildEditableRow('Full Name', Icons.edit),
+                  buildEditableRow('Email', Icons.edit),
+                  buildEditableRow('Date of Birth', Icons.calendar_today),
+                  buildEditableRow('Mobile Number', Icons.edit),
+                  buildEditableRow('Pan Number', Icons.edit),
+                  buildEditableRow(
+                    'Account Number',
+                    editButtonText: 'Request for Edit',
+                    Icons.edit,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBarCustom(
+        onItemTapped: _onItemTapped,
+        selectedIndex: _selectedIndex,
+      ),
+    );
+  }
+
+  Widget buildEditableRow(String label, IconData icon,
+      {String? editButtonText}) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          Expanded(
+            child: Text(
+              label,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                  // Add other text styles as needed
+                ),),
+          ),
+          IconButton(
+            icon: Icon(icon),
+            onPressed: () {
+              // Add your edit button functionality here
+            },
+          ),
+          if (editButtonText != null)
+            ElevatedButton(
+              onPressed: () {
+                // Add your "Request for Edit" button functionality here
+              },
+              child: Text(editButtonText),
+            ),
+        ],
+      ),
+    );
+  }
+}

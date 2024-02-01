@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+
+class UserProfile extends StatefulWidget {
+  @override
+  _UserProfileState createState() => _UserProfileState();
+}
+
+class _UserProfileState extends State<UserProfile> {
+  String userName = "John Doe";
+  TextEditingController _editingController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('User Profile'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildEditableField("Name", userName),
+            // Add other fields like email, mobile number, etc.
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildEditableField(String label, String value) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Text(value),
+            ),
+            IconButton(
+              icon: Icon(Icons.edit),
+              onPressed: () {
+                _startEditing(label, value);
+              },
+            ),
+          ],
+        ),
+        Divider(),
+      ],
+    );
+  }
+
+  void _startEditing(String label, String value) {
+    _editingController.text = value;
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Edit $label"),
+          content: TextField(
+            controller: _editingController,
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Cancel"),
+            ),
+            TextButton(
+              onPressed: () {
+                _saveChanges(label);
+                Navigator.pop(context);
+              },
+              child: Text("Save"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _saveChanges(String label) {
+    setState(() {
+      if (label == "Name") {
+        userName = _editingController.text;
+      }
+      // Add similar logic for other fields.
+    });
+  }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: UserProfile(),
+  ));
+}
