@@ -1,8 +1,8 @@
- Text(
-            'Manage Account',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight:FontWeight.w900,
-            ),
-            ),
-            add a data that contain a name of the borrower email mobile number, date of birth, account number,
+                  Icon(Icons.edit,),
+                  Text('Username Email@ PHone NUmber'),
+                  Icon(Icons.edit,),
+                  Text('NAme'),
+                  Icon(Icons.edit,),
+                  Text('NAme'),
+                  Icon(Icons.edit,),
+                  Text('NAme'),

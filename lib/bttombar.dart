@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+
 class BottomNavigationBarCustom extends StatelessWidget {
   final void Function(int) onItemTapped;
   final int selectedIndex;
 
   const BottomNavigationBarCustom({
     Key? key,
-    required this.onItemTapped,
+    required this.onItemTapped ,
     required this.selectedIndex,
   }) : super(key: key);
 
@@ -26,12 +27,17 @@ class BottomNavigationBarCustom extends StatelessWidget {
           
           label: 'Profile',
           icon: Icon(Icons.person),
+          
         ),
       ],
       currentIndex: selectedIndex,
       selectedItemColor: Colors.black,
       iconSize: 40,
+      
     );
+    
   }
+  
 }
+
  
