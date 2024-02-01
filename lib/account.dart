@@ -56,6 +56,7 @@ class _AccountState extends State<Account> {
             height: 250,
             decoration: const BoxDecoration(
             color:Color(0xFFD9C7AE),
+            
             // image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover,),                    
             ),
             width: double.infinity,  
