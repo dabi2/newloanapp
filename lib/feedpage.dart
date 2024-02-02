@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lame/Colors/Colors.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({super.key});
@@ -10,14 +11,13 @@ class FeedPage extends StatefulWidget {
 class _feedpageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      
+    return Column(      
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
+              decoration: BoxDecoration(
+                color: MainColors.darkColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
