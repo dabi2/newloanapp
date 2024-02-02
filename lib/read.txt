@@ -4,7 +4,7 @@ button (0xFF6962AD)
 button2(Color(0xFF02706B))
 
 meeting Link:
-https://us05web.zoom.us/j/82553589513?pwd=btAKQCFUhOamUJFjbhs7QYNFvLkbnN.1
+  
 
 google sheet task update:
 https://docs.google.com/spreadsheets/d/11OpsxUen3JYnh9H9bjK_4Hb5hnQTTevQ4SpF8jKUrEM/edit?usp=drive_link
