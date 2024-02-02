@@ -75,7 +75,8 @@ class _feedpageState extends State<FeedPage> {
             
             height: 200,
             decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/images/logo.png')),
+              image: DecorationImage(image: AssetImage('images/coins.jpeg'
+              ),fit: BoxFit.fill,),
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
