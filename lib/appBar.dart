@@ -8,7 +8,7 @@ class Appbarr {
     title: Text(
       'ITPL',
       style: TextStyle(
-        fontSize: 50,
+        fontSize: 30,
         fontWeight: FontWeight.w900,
       ),
     ),
