@@ -16,7 +16,6 @@ class _AccountState extends State<Account> {
     });
   }
 
-<<<<<<< HEAD
   String UserName = "john Doe";
   DateTime? dateOfBirth;
   // update date of birth
@@ -28,8 +27,6 @@ class _AccountState extends State<Account> {
     print("Date of Birth updated: $selectedDate");
   }
 
-=======
->>>>>>> 2124e30a53a24db596dab4ac18df6c5160ed1101
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,19 +45,11 @@ class _AccountState extends State<Account> {
       ),
       body: Stack(children: <Widget>[
         Container(
-<<<<<<< HEAD
           child: const Column(
             children: [
               Padding(padding: EdgeInsets.only(top: 20)),
               Padding(
                 padding: EdgeInsets.all(8.0),
-=======
-          child: Column(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 20)),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
->>>>>>> 2124e30a53a24db596dab4ac18df6c5160ed1101
                 child: CircleAvatar(
                   radius: 50,
                   child: Icon(
@@ -76,10 +65,7 @@ class _AccountState extends State<Account> {
           height: 250,
           decoration: const BoxDecoration(
             color: Color(0xFFD9C7AE),
-<<<<<<< HEAD
 
-=======
->>>>>>> 2124e30a53a24db596dab4ac18df6c5160ed1101
             // image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover,),
           ),
           width: double.infinity,
@@ -91,7 +77,6 @@ class _AccountState extends State<Account> {
             right: 50,
           ),
           child: Container(
-<<<<<<< HEAD
             padding: const EdgeInsets.all(20),
             decoration: const BoxDecoration(
                 color: Color(0xFFB19576),
@@ -238,41 +223,6 @@ class _AccountState extends State<Account> {
               ],
             ),
           ),
-=======
-              padding: const EdgeInsets.all(20),
-              decoration: const BoxDecoration(
-                  color: Color(0xFFB19576),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  )),
-              height: 500,
-              width: double.infinity,
-              child: ListView(
-                children: const [
-                  Icon(
-                    Icons.edit,
-                  ),
-                  Text(
-                    'Username Email@ PHone NUmber',
-                    style: TextStyle(
-                        color: Color(0xFF02706B), fontWeight: FontWeight.w900),
-                  ),
-                  Icon(
-                    Icons.edit,
-                  ),
-                  Text('NAme'),
-                  Icon(
-                    Icons.edit,
-                  ),
-                  Text('NAme'),
-                  Icon(
-                    Icons.edit,
-                  ),
-                  Text('NAme'),
-                ],
-              )),
->>>>>>> 2124e30a53a24db596dab4ac18df6c5160ed1101
         ),
       ]),
       bottomNavigationBar: BottomNavigationBarCustom(

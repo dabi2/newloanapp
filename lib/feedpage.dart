@@ -69,14 +69,23 @@ class _feedpageState extends State<FeedPage> {
             alignment: Alignment(-1,-1),
             child: Text('Your Credit Score',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
           ),
+        ),
+        SizedBox(
+          child: Container(
+            
+            height: 200,
+            decoration: const BoxDecoration(
+              image: DecorationImage(image: AssetImage('assets/images/logo.png')),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+              ),
+          ),
         )
-        // Padding(          
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: Container(
-        //     color: Colors.white,
-           
-        //   ),
-        // ),
       ],
       
     );
