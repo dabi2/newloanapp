@@ -1,0 +1,10 @@
+                  Icon(Icons.edit,),
+                  Text('Username Email@ PHone NUmber'),
+                  Icon(Icons.edit,),
+                  Text('NAme'),
+                  Icon(Icons.edit,),
+                  Text('NAme'),
+                  Icon(Icons.edit,),
+                  Text('NAme'),
+
+//add color code hangne                 
