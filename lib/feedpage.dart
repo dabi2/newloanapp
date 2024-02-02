@@ -18,6 +18,7 @@ class _feedpageState extends State<FeedPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Container(
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
               color: MainColors.lightColor,
               height: 200,
               child: Column(
