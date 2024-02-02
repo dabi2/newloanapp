@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lame/bttomBar.dart';
+import 'package:lame/Colors/Colors.dart';
 
 class Account extends StatefulWidget {
   const Account({super.key});
@@ -31,6 +32,7 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         
         leading: IconButton(
             onPressed: () {
@@ -41,8 +43,8 @@ class _AccountState extends State<Account> {
           'Personal Information',
           style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white70),
         ),
-        backgroundColor: const Color(0xFF01BDB2),
-        elevation: 20,
+        backgroundColor:MainColors.darkColor,
+
       ),
       body: Stack(children: <Widget>[
         Container(

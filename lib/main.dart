@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lame/homepage.dart';
-import 'package:lame/knowmore.dart';
 // import 'package:lame/landingpage.dart';
 
 void main() {

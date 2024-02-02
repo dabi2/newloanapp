@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lame/Colors/Colors.dart';
-import 'package:lame/knowmore.dart';
 
 class Appbarr {
   final AppBar appbar = AppBar(

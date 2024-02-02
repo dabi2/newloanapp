@@ -76,19 +76,13 @@ class _feedpageState extends State<FeedPage> {
             height: 200,
             decoration: const BoxDecoration(
               image: DecorationImage(
+                alignment: Alignment.topLeft,
                 image: AssetImage('images/coins.jpeg'),
-                fit: BoxFit.fill,
-              ),
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+                // fit: BoxFit.fill,
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }
