@@ -20,7 +20,6 @@ class _feedpageState extends State<FeedPage> {
             child: Container(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
               color: MainColors.lightColor,
-              height: 200,
               child: Column(
                 children: [
                   const Text(
