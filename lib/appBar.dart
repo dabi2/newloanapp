@@ -4,7 +4,7 @@ import 'package:lame/knowmore.dart';
 
 class Appbarr {
   final AppBar appbar = AppBar(
-    // elevation: 10,
+   
     title: Text(
       'ITPL',
       style: TextStyle(
