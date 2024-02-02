@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lame/Colors/Colors.dart';
 import 'package:lame/knowmore.dart';
 
 class Appbarr {
@@ -12,7 +13,7 @@ class Appbarr {
       ),
     ),
     centerTitle: true,
-    backgroundColor: Colors.white,
+    backgroundColor: MainColors.darkColor,
     actions: [
       IconButton(
         onPressed: () {

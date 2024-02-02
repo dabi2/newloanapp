@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Colors {
+class MainColors {
   static Color tileColors = const Color.fromRGBO(255, 255, 255, 0.4);
   static Color darkColor = const Color.fromARGB(51, 1, 189, 178);
   static Color brightColor = const Color.fromARGB(255, 1, 189, 178);
