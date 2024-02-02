@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lame/knowmore.dart';
+
 class Appbarr {
   final AppBar appbar = AppBar(
     elevation: 10,
@@ -11,7 +12,7 @@ class Appbarr {
       ),
     ),
     centerTitle: true,
-    backgroundColor: Color(0xFF01BDB2),
+    backgroundColor: Colors.white,
     actions: [
       IconButton(
         onPressed: () {
